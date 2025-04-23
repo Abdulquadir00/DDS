@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Designing Dreams Studio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+  </style>
+</head>
+<body class="text-gray-800">
+  <nav class="fixed top-0 w-full bg-gradient-to-r from-black to-gray-900 text-white px-6 py-4 flex justify-between items-center z-50 shadow-lg transition-all duration-500 ease-in-out">
+    <div class="flex items-center gap-3">
+      <img src="img/logo.png" alt="Designing Dreams Studio Logo" class="h-12 w-auto max-w-[150px] object-contain" />
+      <span class="font-bold text-2xl tracking-wide">Designing Dreams Studio</span>
+    </div>
+    <button onclick="scrollToSection('contact')" class="bg-gradient-to-r from-orange-400 to-yellow-400 text-white px-6 py-2 rounded-full shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">Get a Free Consultation</button>
+  </nav>
+
+  <header class="relative h-screen flex items-center justify-between text-white bg-cover bg-center px-8 pt-32" style="background-image: url('img/home.jpeg');">
+    <div class="bg-black bg-opacity-50 w-full h-full absolute top-0 left-0 z-0"></div>
+    <div class="relative z-10 max-w-xl">
+      <h1 class="text-5xl md:text-6xl font-bold animate-fade-in-up">Transform Your Space</h1>
+      <p class="text-xl md:text-2xl my-6 animate-fade-in-up delay-150">Elegant Interior & Exterior Design Solutions</p>
+    </div>
+    <div class="relative z-10 bg-white text-black p-8 rounded-2xl shadow-2xl w-full max-w-md animate-fade-in-up">
+        <h2 class="text-2xl font-bold mb-4">Designs for Every Budget</h2>
+        <form class="flex flex-col gap-4" id="quoteForm" novalidate>
+            <div class="relative">
+                <label for="quoteName" class="sr-only">Name</label>
+                <input type="text" id="quoteName" placeholder="Name" required class="w-full p-3 rounded-md border border-red-300 focus:outline-none focus:border-red-500 transition duration-300 peer invalid:border-red-500" />
+                <p class="mt-1 text-sm text-red-500 invisible peer-invalid:visible" id="quoteNameError">Please enter your name</p>
+            </div>
+            <div class="relative">
+                <label for="quotePhone" class="sr-only">Phone Number</label>
+                <div class="flex items-center border border-red-300 rounded-md overflow-hidden focus-within:border-red-500">
+                    <span class="px-3">🇮🇳</span>
+                    <input type="tel" id="quotePhone" placeholder="Phone number" required class="w-full p-3 focus:outline-none transition duration-300 peer invalid:border-red-500" />
+                </div>
+                <p class="mt-1 text-sm text-red-500 invisible peer-invalid:visible" id="quotePhoneError">Please enter a mobile number</p>
+            </div>
+            <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded-md hover:bg-orange-600 transition">Get Quote</button>
+        </form>
+      </div>
+  </header>
+
+  <section id="services" class="py-20 bg-gray-50">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold">Our Services</h2>
+      <p class="text-gray-600 mt-2">We provide modern and tailored solutions</p>
+    </div>
+    <div class="max-w-5xl mx-auto px-4 grid gap-10 sm:grid-cols-2">
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-2">Interior Design</h3>
+        <p>Stylish, comfortable, and functional interiors tailored to your needs.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-2">Exterior Renovation</h3>
+        <p>Beautiful facades and landscaping that enhance curb appeal.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-2">Modular Kitchens</h3>
+        <p>Efficient, elegant, and practical kitchen solutions.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-2xl transition">
+        <h3 class="text-xl font-semibold mb-2">Custom Furniture</h3>
+        <p>Unique pieces crafted to fit your space and style.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="py-20 bg-white">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold">Portfolio</h2>
+      <p class="text-gray-600 mt-2">A glimpse of our recent work</p>
+    </div>
+    <div class="max-w-6xl mx-auto px-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <img src="https://source.unsplash.com/400x300/?interior" alt="Interior Sample" class="rounded-xl shadow hover:scale-105 transition" />
+      <img src="https://source.unsplash.com/400x300/?exterior" alt="Exterior Sample" class="rounded-xl shadow hover:scale-105 transition" />
+      <img src="https://source.unsplash.com/400x300/?livingroom" alt="Living Room" class="rounded-xl shadow hover:scale-105 transition" />
+      <img src="https://source.unsplash.com/400x300/?garden" alt="Garden" class="rounded-xl shadow hover:scale-105 transition" />
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 bg-gradient-to-r from-yellow-50 to-orange-100">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold">Contact Us</h2>
+      <p class="text-gray-700 mt-2">We’d love to hear from you!</p>
+    </div>
+    <form id="contactForm" class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg space-y-4" onsubmit="submitContactForm(event)">
+        <input id="contactName" type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+        <input id="contactEmail" type="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" />
+        <textarea id="contactMessage" rows="5" placeholder="Your Message" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-orange-400" required></textarea>
+        <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full shadow transition transform hover:scale-105">Send Message</button>
+    </form>
+    <p id="form-response" class="text-center mt-4 text-green-600 font-medium hidden">Thank you! We will get back to you soon.</p>
+    <div class="mt-12 text-center text-gray-700">
+      <p class="text-lg font-semibold">Phone: <a href="tel:+919876543210" class="text-orange-600 hover:underline">+91 98765 43210</a></p>
+      <p class="text-lg font-semibold">Email: <a href="mailto:info@designingdreams.com" class="text-orange-600 hover:underline">info@designingdreams.com</a></p>
+      <p class="text-lg font-semibold">Address: 123 Design Street, Creative City, IN 560001</p>
+      <div class="mt-6">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!..." width="100%" height="300" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-gray-800 text-white text-center py-6">
+    <p>&copy; 2025 Designing Dreams Studio. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const quoteForm = document.getElementById('quoteForm');
+    const quoteNameInput = document.getElementById('quoteName');
+    const quotePhoneInput = document.getElementById('quotePhone');
+    const quoteNameError = document.getElementById('quoteNameError');
+    const quotePhoneError = document.getElementById('quotePhoneError');
+    
+    quoteForm.addEventListener('submit', function (event) {
+        let isValid = true;
+    
+        if (quoteNameInput.value.trim() === '') {
+            showError(quoteNameInput, quoteNameError);
+            isValid = false;
+        } else {
+            hideError(quoteNameInput, quoteNameError);
+        }
+    
+        if (quotePhoneInput.value.trim() === '') {
+            showError(quotePhoneInput, quotePhoneError);
+            isValid = false;
+        } else {
+            hideError(quotePhoneInput, quotePhoneError);
+        }
+    
+        if (!isValid) {
+            event.preventDefault();
+        }
+    });
+
+    function submitContactForm(event) {
+        event.preventDefault();
+        const name = document.getElementById('contactName').value;
+        const email = document.getElementById('contactEmail').value;
+        const message = document.getElementById('contactMessage').value;
+    
+        if (name && email && message) {
+            document.getElementById('form-response').classList.remove('hidden');
+            event.target.reset();
+        }
+    }
+
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    function showError(input, errorElement) {
+        errorElement.classList.remove('invisible');
+        input.classList.add('border-red-500');
+    }
+
+    function hideError(input, errorElement) {
+        errorElement.classList.add('invisible');
+        input.classList.remove('border-red-500');
+    }
+  </script>
+
+  <style>
+    .animate-fade-in-up {
+      animation: fadeInUp 1.5s ease-out both;
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</body>
+</html>
