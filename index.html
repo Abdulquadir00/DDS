@@ -4,61 +4,107 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Designing Dreams Studio offers elegant interior and exterior design solutions, including modular kitchens, wardrobes, and more." />
-  <meta name="keywords" content="interior design, exterior design, modular kitchens, home decor, Bangalore" />
+  <meta name="keywords" content="interior design, exterior design, modular kitchens, home decor, Patna" />
+  <meta name="geo.placename" content="Patna, Bihar, India" />
   <meta property="og:title" content="Designing Dreams Studio" />
   <meta property="og:description" content="Transform your space with our creative and elegant design solutions." />
   <meta property="og:image" content="img/og-image.jpg" />
   <meta property="og:url" content="https://www.designingdreams.com" />
   <title>Designing Dreams Studio</title>
-  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="icon" type="image/png" href="img/logo.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet" />
   <style>
-    body{font-family:'Poppins',sans-serif;}
-    .parallax-bg{background-attachment:fixed;background-size:cover;background-position:center;}
-    .animate-pulse{animation:pulse 2s infinite;}
-    .portfolio-img{transition:transform .3s ease,opacity .3s ease;position:relative;}
-    .portfolio-img::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(45deg,rgba(249,115,22,.3),rgba(234,179,8,.3));opacity:0;transition:opacity .3s ease;}
-    .portfolio-img:hover::after{opacity:.7;}
-    .portfolio-img:hover{transform:scale(1.05);opacity:.9;}
-    .form-input{transition:all .3s ease;}
-    .form-input:focus{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.1);}
-    .contact-link{transition:color .3s ease,transform .3s ease;}
-    .contact-link:hover{color:#f97316;transform:translateY(-2px);}
-    .text-glow{animation:glow 2s ease-in-out infinite alternate;}
-    .offer-card{transition:all .3s ease;}
-    .offer-card:hover{background:linear-gradient(to bottom,#fff7ed,#fef3c7);transform:translateY(-5px);}
-    @keyframes glow{from{text-shadow:0 0 5px rgba(255,255,255,.5);}to{text-shadow:0 0 15px rgba(255,255,255,1);}}
-    .modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.7);z-index:100;}
-    .modal-content{background:linear-gradient(to bottom,#fff,#fff7ed);max-width:500px;width:90%;margin:10% auto;padding:2rem;border-radius:1rem;position:relative;animation:fadeIn .4s ease;box-shadow:0 10px 20px rgba(0,0,0,.2);border:2px solid transparent;background-clip:padding-box;background:linear-gradient(to bottom,#fff,#fff7ed) padding-box,linear-gradient(to right,#f97316,#eab308) border-box;}
-    .modal-content h2{color:#1f2937;}
-    .close-btn{position:absolute;top:1rem;right:1rem;font-size:1.5rem;cursor:pointer;color:#1f2937;transition:color .3s ease;}
-    .close-btn:hover{color:#f97316;}
-    @keyframes fadeIn{from{opacity:0;transform:scale(.8);}to{opacity:1;transform:scale(1);}}
-    .back-to-top{position:fixed;bottom:2rem;right:2rem;background:#f97316;color:#fff;width:3rem;height:3rem;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transition:opacity .3s ease,transform .3s ease;z-index:50;}
-    .back-to-top.visible{opacity:1;}
-    .back-to-top:hover{transform:scale(1.1);background:#ea580c;}
-    .nav-button{position:relative;}
-    .nav-button::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:linear-gradient(to right,#f97316,#eab308);transition:width .3s ease;}
-    .nav-button:hover::after{width:100%;}
-    .nav-button:hover{transform:scale(1.15);transition-duration:400ms;}
-    .hamburger{display:none;cursor:pointer;}
-    .hamburger div{width:25px;height:3px;background:#fff;margin:5px 0;transition:all .3s ease;}
-    .nav-menu{display:flex;align-items:center;gap:1rem;}
-    .bg-gradient-to-r{background-image:linear-gradient(to right,#fff,#f3f4f6);}
-    @media (max-width:640px){
-      .hamburger{display:block;}
-      .nav-menu{display:none;flex-direction:column;position:absolute;top:100%;left:0;width:100%;background:#1f2937;padding:1rem;}
-      .nav-menu.active{display:flex;}
-      .nav-menu a{padding:.75rem 1rem;font-size:1.1rem;}
-      .hamburger.active div:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
-      .hamburger.active div:nth-child(2){opacity:0;}
-      .hamburger.active div:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}
-      .modal-content{max-height:80vh;overflow-y:auto;}
+    body { font-family: 'Poppins', sans-serif; }
+    .parallax-bg { background-attachment: fixed; background-size: cover; background-position: center; width: 100%; height: 100%; }
+    .animate-pulse { animation: pulse 2s infinite; }
+    .portfolio-img { transition: transform 0.3s ease, opacity 0.3s ease; position: relative; }
+    .portfolio-img::after { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(45deg, rgba(249, 115, 22, 0.3), rgba(234, 179, 8, 0.3)); opacity: 0; transition: opacity 0.3s ease; }
+    .portfolio-img:hover::after { opacity: 0.7; }
+    .portfolio-img:hover { transform: scale(1.05); opacity: 0.9; }
+    .form-input { transition: all 0.3s ease; }
+    .form-input:focus { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+    .contact-link { transition: color 0.3s ease, transform 0.3s ease; }
+    .contact-link:hover { color: #f97316; transform: translateY(-2px); }
+    .text-glow { animation: glow 2s ease-in-out infinite alternate; }
+    .offer-card { transition: all 0.3s ease; }
+    .offer-card:hover { background: linear-gradient(to bottom, #fff7ed, #fef3c7); transform: translateY(-5px); }
+    @keyframes glow { from { text-shadow: 0 0 5px rgba(255, 255, 255, 0.5); } to { text-shadow: 0 0 15px rgba(255, 255, 255, 1); } }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); z-index: 100; }
+    .modal-content { background: linear-gradient(to bottom, #fff, #fff7ed); max-width: 500px; width: 90%; margin: 10% auto; padding: 2rem; border-radius: 1rem; position: relative; animation: fadeIn 0.4s ease; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); border: 2px solid transparent; background-clip: padding-box; background: linear-gradient(to bottom, #fff, #fff7ed) padding-box, linear-gradient(to right, #f97316, #eab308) border-box; }
+    .modal-content h2 { color: #1f2937; }
+    .close-btn { position: absolute; top: 1rem; right: 1rem; font-size: 1.5rem; cursor: pointer; color: #1f2937; transition: color 0.3s ease; }
+    .close-btn:hover { color: #f97316; }
+    @keyframes fadeIn { from { opacity: 0; transform: scale(0.8); } to { opacity: 1; transform: scale(1); } }
+    .back-to-top { position: fixed; bottom: 2rem; right: 2rem; background: #f97316; color: #fff; width: 3rem; height: 3rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transition: opacity 0.3s ease, transform 0.3s ease; z-index: 50; }
+    .back-to-top.visible { opacity: 1; }
+    .back-to-top:hover { transform: scale(1.1); background: #ea580c; }
+    .nav-button { position: relative; }
+    .nav-button::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: linear-gradient(to right, #f97316, #eab308); transition: width 0.3s ease; }
+    .nav-button:hover::after { width: 100%; }
+    .nav-button:hover { transform: scale(1.15); transition-duration: 400ms; }
+    .hamburger { display: none; cursor: pointer; }
+    .hamburger div { width: 25px; height: 3px; background: #fff; margin: 5px 0; transition: all 0.3s ease; }
+    .nav-menu { display: flex; align-items: center; gap: 1rem; }
+    .bg-gradient-to-r { background-image: linear-gradient(to right, #fff, #f3f4f6); }
+    .hero-overlay { min-height: 100%; top: 0; bottom: 0; }
+    @media (max-width: 640px) {
+      .parallax-bg { background-attachment: scroll; }
+      .hamburger { display: block; }
+      .nav-menu { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; width: 100%; background: #1f2937; padding: 1rem; }
+      .nav-menu.active { display: flex; }
+      .nav-menu a { padding: 0.75rem 1rem; font-size: 1.1rem; }
+      .hamburger.active div:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      .hamburger.active div:nth-child(2) { opacity: 0; }
+      .hamburger.active div:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+      .modal-content { max-height: 80vh; overflow-y: auto; }
+      header#home { flex-direction: column; align-items: center; text-align: center; min-height: calc(100vh + 100px); width: 100%; height: 100%; }
+      header#home .quote-form-container { min-width: 300px; max-width: calc(100% - 16px); min-height: fit-content; }
     }
+  </style>
+  <style>
+    .slideshow {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  animation: zoom 20s ease-in-out infinite;
+  transition: opacity 1s ease-in-out;
+  transform: scale(1);
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Zoom keyframe animation */
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
   </style>
 </head>
 <body class="text-gray-800 bg-gray-100">
@@ -67,87 +113,108 @@
       <img src="img/logo.png" alt="Designing Dreams Studio Logo" class="h-12 w-auto max-w-[150px] object-contain" />
       <span class="font-bold text-2xl tracking-wide">Designing Dreams Studio</span>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">
+    <div class="hamburger" onclick="toggleMenu()" aria-expanded="false">
       <div></div>
       <div></div>
       <div></div>
     </div>
     <div class="nav-menu">
-      <a href="#home" class="nav-button px-4 py-2 text-white hover:text-orange-400">Home</a>
-      <a href="#what-we-offer" class="nav-button px-4 py-2 text-white hover:text-orange-400">Services</a>
-      <a href="#portfolio" class="nav-button px-4 py-2 text-white hover:text-orange-400">Portfolio</a>
-      <a href="#connect" class="nav-button px-4 py-2 text-white hover:text-orange-400">Contact</a>
       <div class="text-center" data-aos="fade-up" data-aos-delay="500">
         <button onclick="openModal()" class="nav-button bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 px-6 py-2 rounded-full shadow-lg hover:scale-110 transform transition duration-300 animate-pulse">Get a Free Consultation</button>
       </div>
     </div>
   </nav>
 
-  <div id="contactModal" class="modal">
-    <div class="modal-content">
+  <div id="contactModal" class="modal" role="dialog" aria-modal="true">
+    <div class="modal-content max-w-md mx-auto p-6 bg-white rounded-lg shadow-lg">
+      
+      <!-- Header -->
       <header class="flex justify-between items-center mb-4">
         <span class="text-lg font-semibold text-gray-800">Get a Free Consultation</span>
         <button class="close-btn" onclick="closeModal()" aria-label="Close modal">
           <i class="fas fa-times text-2xl text-gray-800 hover:text-orange-600 transition-colors"></i>
         </button>
       </header>
+  
+      <!-- Form -->
       <form id="contactForm" class="flex flex-col gap-4" novalidate>
+  
+        <!-- Name -->
         <div class="relative">
           <label for="contactName" class="sr-only">Name</label>
-          <input type="text" id="contactName" placeholder="Your Name" required class="form-input w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50" />
-          <p class="mt-1 text-sm text-red-500 invisible" id="contactNameError">Please enter your name</p>
+          <input type="text" id="contactName" placeholder="Your Name" required
+            class="form-input w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50" />
+          <p class="mt-1 text-sm text-red-500 hidden" id="contactNameError">Please enter your name</p>
         </div>
+  
+        <!-- Phone -->
         <div class="relative">
           <label for="contactPhone" class="sr-only">Phone Number</label>
-          <input type="tel" id="contactPhone" placeholder="Your Phone Number" required class="form-input w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50" />
-          <p class="mt-1 text-sm text-red-500 invisible" id="contactPhoneError">Please enter a valid phone number</p>
+          <input type="tel" id="contactPhone" placeholder="Your Phone Number" required
+            class="form-input w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50" />
+          <p class="mt-1 text-sm text-red-500 hidden" id="contactPhoneError">Please enter a valid phone number</p>
         </div>
-        <button type="submit" class="bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 px-4 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105">Send Message</button>
+  
+        <!-- Email -->
+        <div class="relative">
+          <label for="contactEmail" class="sr-only">Email</label>
+          <input type="email" id="contactEmail" placeholder="Your Email Address" required
+            class="form-input w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50" />
+          <p class="mt-1 text-sm text-red-500 hidden" id="contactEmailError">Please enter a valid email address</p>
+        </div>
+  
+        <!-- Mobile -->
+        <div class="relative">
+          <label for="contactMobile" class="sr-only">Mobile Number</label>
+          <input type="tel" id="contactMobile" placeholder="Your Mobile Number" required
+            class="form-input w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50" />
+          <p class="mt-1 text-sm text-red-500 hidden" id="contactMobileError">Please enter your mobile number</p>
+        </div>
+  
+        <!-- Submit Button -->
+        <button type="submit" id="submitBtn"
+          class="bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 px-4 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105 disabled:opacity-50">
+          Send Message
+        </button>
       </form>
-      <p id="form-response" class="text-center mt-4 text-green-600 font-medium hidden">Thank you! We will get back to you soon.</p>
+  
+      <!-- Response Message -->
+      <p id="form-response" class="text-center mt-4 text-green-600 font-medium hidden">
+        Thank you! We will get back to you soon.
+      </p>
     </div>
   </div>
+  
+  
 
-  <header id="home" class="relative h-screen flex items-center justify-between text-white bg-cover bg-center px-8 pt-32 parallax-bg" style="background-image: url('img/home.jpeg');" data-aos="fade-in">
-    <div class="bg-black bg-opacity-60 w-full h-full absolute top-0 left-0 z-0"></div>
-    <div class="relative z-10 max-w-2xl" data-aos="fade-up" data-aos-delay="100">
-      <h1 class="text-5xl md:text-7xl font-bold leading-tight text-glow">Transform Your Space</h1>
-      <p class="text-xl md:text-2xl my-6">Crafting Elegant Interior & Exterior Designs</p>
+  <header id="home" class="relative w-full h-screen flex justify-center items-center text-white bg-cover bg-center px-4 sm:px-6" data-aos="fade-in">
+    <div class="slideshow">
+      <div class="slide active" style="background-image: url('img/home.jpeg');"></div>
+      <div class="slide" style="background-image: url('img/home2.jpg');"></div>
+      <div class="slide" style="background-image: url('img/home3.jpg');"></div>
     </div>
-    <div class="relative z-10 bg-white text-black p-8 rounded-2xl shadow-2xl w-full max-w-md" data-aos="fade-up" data-aos-delay="200">
-      <h2 class="text-2xl font-bold mb-4">Designs for Every Budget</h2>
-      <form class="flex flex-col gap-4" id="quoteForm" novalidate>
-        <div class="relative">
-          <label for="quoteName" class="sr-only">Name</label>
-          <input type="text" id="quoteName" placeholder="Your Name" required class="form-input w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:border-orange-500 bg-gray-50" />
-          <p class="mt-1 text-sm text-red-500 invisible" id="quoteNameError">Please enter your name</p>
-        </div>
-        <div class="relative">
-          <label for="quotePhone" class="sr-only">Phone Number</label>
-          <div class="flex items-center border border-gray-300 rounded-lg overflow-hidden bg-gray-50 focus-within:border-orange-500">
-            <span class="px-3 text-gray-600">🇮🇳</span>
-            <input type="tel" id="quotePhone" placeholder="Phone number" required class="form-input w-full p-3 focus:outline-none" />
-          </div>
-          <p class="mt-1 text-sm text-red-500 invisible" id="quotePhoneError">Please enter a mobile number</p>
-        </div>
-        <button type="submit" class="bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 px-4 py-3 rounded-lg hover:bg-orange-600 transition transform hover:scale-105">Get Quote</button>
-      </form>
+    <div class="bg-black bg-opacity-60 w-full h-full absolute top-0 left-0 z-0 hero-overlay"></div>
+    <div class="relative z-10 text-center" data-aos="fade-up" data-aos-delay="100">
+      <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold leading-tight text-glow">Transform Your Space</h1>
+      <p class="text-lg sm:text-xl md:text-2xl my-4">Crafting Elegant Interior & Exterior Designs</p>
+      <button onclick="openModal()" class="nav-button bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 px-6 py-2 rounded-full shadow-lg hover:scale-110 transform transition duration-300 animate-pulse">Get a Free Consultation</button>
     </div>
+    
   </header>
 
   <section id="what-we-offer" class="py-20 bg-gradient-to-r from-white to-gray-100">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center mb-12">
         <h2 class="text-4xl font-bold text-gray-900">What We Offer</h2>
-        <button onclick="openModal()" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">GET FREE QUOTE</button>
+        <button onclick="openModal()" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">Get Free Quote</button>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl shadow-lg p-6 offer-card hover:bg-gradient-to-b hover:from-orange-50 hover:to-yellow-50 transition transform hover:-translate-y-1">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white rounded-xl shadow-lg p-6 offer-card" data-aos="fade-up" data-aos-delay="100">
           <div class="flex items-center mb-4">
-            <i class="fas fa-paint-brush text-orange-600 text-2xl mr-2" aria-label="Services Icon"></i>
+            <i class="fas fa-paint-brush text-orange-600 text-2xl mr-2 offer-icon" aria-hidden="true"></i>
             <h3 class="text-2xl font-semibold text-orange-600">Our Services</h3>
           </div>
-          <ul class="list-disc list-inside text-gray-600">
+          <ul class="list-disc list-inside text-gray-600 mb-4">
             <li>Modular kitchens</li>
             <li>Modular wardrobes</li>
             <li>Lighting</li>
@@ -158,39 +225,53 @@
             <li>Wall design & painting</li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 offer-card hover:bg-gradient-to-b hover:from-orange-50 hover:to-yellow-50 transition transform hover:-translate-y-1">
+        <div class="bg-white rounded-xl shadow-lg p-6 offer-card" data-aos="fade-up" data-aos-delay="200">
           <div class="flex items-center mb-4">
-            <i class="fas fa-shield-alt text-orange-600 text-2xl mr-2" aria-label="Warranty Icon"></i>
+            <i class="fas fa-shield-alt text-orange-600 text-2xl mr-2 offer-icon" aria-hidden="true"></i>
             <h3 class="text-2xl font-semibold text-orange-600">Warranty</h3>
           </div>
-          <ul class="list-disc list-inside text-gray-600">
-            <li><strong>FLAT 10-year warranty</strong> - Stay worry-free with our warranty policy on modular products.</li>
-            <li><strong>Up to 1-year on-site service warranty</strong> - Warranty on on-site services such as painting, electrical, plumbing, and more.</li>
+          <ul class="list-disc list-inside text-gray-600 mb-4">
+            <li><strong>Up to 10 Years Warranty</strong> - on furniture and fittings.</li>
+            <li><strong>Material Assurance</strong> - Only certified, high-quality materials used.</li>
+            <li><strong>Workmanship Guarantee</strong> - Flawless finish and expert craftsmanship backed by warranty.</li>
+            <li><strong>After-Sales Support</strong> - Dedicated service team for maintenance and support.</li>
           </ul>
         </div>
-        <div class="bg-white rounded-xl shadow-lg p-6 offer-card hover:bg-gradient-to-b hover:from-orange-50 hover:to-yellow-50 transition transform hover:-translate-y-1">
+        <div class="bg-white rounded-xl shadow-lg p-6 offer-card" data-aos="fade-up" data-aos-delay="300">
           <div class="flex items-center mb-4">
-            <i class="fas fa-lightbulb text-orange-600 text-2xl mr-2" aria-label="Technology Icon"></i>
+            <i class="fas fa-lightbulb text-orange-600 text-2xl mr-2 offer-icon" aria-hidden="true"></i>
             <h3 class="text-2xl font-semibold text-orange-600">Technology & Science</h3>
           </div>
-          <div class="space-y-4">
+          <div class="space-y-4 mb-4">
             <div class="flex items-start">
               <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>AquaBloc® Technology</strong> - Hermetically sealed edges that ensure no moisture enters the panels of your modular cabinets.</p>
+              <p class="text-gray-600"><strong>3D Design Tools</strong> - Visualize your space with precision before execution.</p>
             </div>
             <div class="flex items-start">
               <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>AntiBubble® Technology</strong> - Super seamless panels without air bubbles for your modular cabinets.</p>
+              <p class="text-gray-600"><strong>Smart Home Integration</strong> - Automate lighting, climate, and security systems.</p>
             </div>
             <div class="flex items-start">
               <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>DuraBuild™ Technology</strong> - Robust structure for modular cabinets, making them strong and long-lasting.</p>
+              <p class="text-gray-600"><strong>Eco-Friendly Materials</strong> - Sustainable and safe materials for healthy living.</p>
             </div>
             <div class="flex items-start">
               <i class="fas fa-arrow-right text-orange-600 mt-1 mr-2" aria-hidden="true"></i>
-              <p class="text-gray-600"><strong>Design Science</strong> - Modular kitchens with improved accessibility that makes daily tasks more efficient and reduces stress on the body.</p>
+              <p class="text-gray-600"><strong>Space Optimization</strong> - Intelligent layouts to make the most of your space.</p>
             </div>
           </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 offer-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="flex items-center mb-4">
+            <i class="fas fa-shield-alt text-orange-600 text-2xl mr-2 offer-icon" aria-hidden="true"></i>
+            <h3 class="text-2xl font-semibold text-orange-600">Benefits</h3>
+          </div>
+          <ul class="list-disc list-inside text-gray-600 mb-4">
+            <li><strong>End-to-End Service</strong> - We manage everything from concept to completion.</li>
+            <li><strong>Time-Saving</strong> - Quick project execution with minimal hassle.</li>
+            <li><strong>Boosted Property Value</strong> - Professionally designed spaces enhance resale potential.</li>
+            <li><strong>Tailored Designs</strong> - Interiors that reflect your personality and needs.</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -199,6 +280,8 @@
   <section id="portfolio" class="py-20 bg-gray-50">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-4xl font-bold text-gray-900">Portfolio</h2>
+      <button onclick="openModal()" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">Get Free Quote</button>
+
       <p class="text-gray-600 mt-2">Explore Our Recent Work</p>
     </div>
     <div class="max-w-6xl mx-auto px-4 grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -224,42 +307,78 @@
   <section id="connect" class="py-20 bg-gradient-to-r from-orange-50 to-yellow-100">
     <div class="text-center mb-12" data-aos="fade-up">
       <h2 class="text-4xl font-bold text-gray-900">Connect With Us</h2>
+      <button onclick="openModal()" class="bg-red-600 text-white px-6 py-3 rounded-lg hover:bg-red-700 transition transform hover:scale-105">Get Free Quote</button>
+
       <p class="text-gray-700 mt-2">Reach out to start your design journey</p>
     </div>
     <div class="max-w-4xl mx-auto px-4" data-aos="fade-up" data-aos-delay="100">
       <div class="bg-white p-8 rounded-2xl shadow-xl text-center text-gray-700">
         <p class="text-lg font-semibold mb-4">
-          Phone: <a href="tel:+919876543210" class="contact-link text-orange-600 hover:underline inline-block">+91 98765 43210</a>
+          Phone: <a href="tel:+919006768029" class="contact-link text-orange-600 hover:underline inline-block">+91 9006768029</a>
         </p>
         <p class="text-lg font-semibold mb-4">
-          Email: <a href="mailto:info@designingdreams.com" class="contact-link text-orange-600 hover:underline inline-block">info@designingdreams.com</a>
+          Email: <a href="mailto:abdul1511999@gmail.com" class="contact-link text-orange-600 hover:underline inline-block">abdul1511999@gmail.com</a>
         </p>
-        <p class="text-lg font-semibold mb-6">Address: 123 Design Street, Bangalore, Karnataka, IN 560001</p>
+        <p class="text-lg font-semibold mb-4">
+          WhatsApp: <a href="https://wa.me/919006768029" class="contact-link text-orange-600 hover:underline inline-block">+91 9006768029</a>
+        </p>
+        <p class="text-lg font-semibold mb-6">Address: Yadav Market, Pirmohani Rd, near Uma Cinema, Maulana Azad Nagar, Ghrounda, Patna, Bihar 800001</p>
       </div>
       <div class="mt-6 shadow-xl rounded-2xl overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.007294862143!2d77.5806433148227!3d12.97159899086394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfeb6b26772c9f!2sBangalore%2C%20Karnataka%20560001%2C%20India!5e0!3m2!1sen!2sin!4v1667901234567!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.908673059345!2d85.147132815036!3d25.609065425846783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDM2JzMyLjYiTiA4NcKwMDgnNDkuNyJF!5e0!3m2!1sen!2sin!4v1737702345678!5m2!1sen!2sin" width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </div>
   </section>
 
   <footer class="bg-gradient-to-r from-gray-900 to-black text-white py-12">
     <div class="max-w-6xl mx-auto px-4 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Business Info Section -->
       <div class="text-center sm:text-left">
         <h3 class="text-xl font-bold mb-4">Designing Dreams Studio</h3>
         <p class="text-gray-300">Transforming spaces with elegance and creativity.</p>
       </div>
-      <div class="text-center">
+  
+      <!-- Contact Info Section -->
+      <div class="text-center sm:text-left">
         <h3 class="text-xl font-bold mb-4">Connect With Us</h3>
-        <p class="text-gray-300">Phone: <a href="tel:+919876543210" class="text-orange-400 hover:underline">+91 98765 43210</a></p>
-        <p class="text-gray-300">Email: <a href="mailto:info@designingdreams.com" class="text-orange-400 hover:underline">info@designingdreams.com</a></p>
+        <p class="text-gray-300">Phone: <a href="tel:+919006768029" class="text-orange-400 hover:underline">+91 9006768029</a></p>
+        <p class="text-gray-300">Email: <a href="mailto:abdul1511999@gmail.com" class="text-orange-400 hover:underline">abdul1511999@gmail.com</a></p>
+        <p class="text-gray-300">WhatsApp: <a href="https://wa.me/919006768029" rel="noopener noreferrer" class="text-orange-400 hover:underline">+91 9006768029</a></p>
       </div>
-      <div class="text-center sm:text-right">
-        <h3 class="text-xl font-bold mb-4">Visit Us</h3>
-        <p class="text-gray-300">123 Design Street, Bangalore, Karnataka, IN 560001</p>
+  
+      <!-- Social Media Links Section -->
+      <div class="text-center lg:text-right">
+        <h3 class="text-xl font-bold mb-4">Follow Us</h3>
+        <!-- Instagram Link -->
+        <a href="https://www.instagram.com/abdul___quadir___/" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram" class="text-pink-500 hover:text-pink-600 text-2xl mx-2">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <!-- WhatsApp Link -->
+        <a href="https://wa.me/919006768029" target="_blank" rel="noopener noreferrer" aria-label="Contact us on WhatsApp" class="text-green-500 hover:text-green-600 text-2xl mx-2">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <!-- Facebook Link (Placeholder: Update with valid URL) -->
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook" class="text-blue-600 hover:text-blue-700 text-2xl mx-2">
+          <i class="fab fa-facebook"></i>
+        </a>
       </div>
     </div>
-    <p class="text-center mt-8 text-gray-400">© 2025 Designing Dreams Studio. All rights reserved.</p>
+  
+    <!-- Address Section -->
+    <div class="text-center mt-8">
+      <h3 class="text-xl font-bold mb-4">Visit Us</h3>
+      <p class="text-gray-300">Yadav Market, Pirmohani Rd, near Uma Cinema, Maulana Azad Nagar, Ghrounda, Patna, Bihar 800001</p>
+    </div>
+  
+    <!-- Copyright Section -->
+    <p class="text-center mt-8 text-gray-400">© <span id="year"></span> Designing Dreams Studio. All rights reserved.</p>
   </footer>
+  
+  <!-- JavaScript to dynamically set the year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+  
 
   <div id="backToTop" class="back-to-top" onclick="scrollToTop()">
     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -267,148 +386,195 @@
     </svg>
   </div>
 
+  <!-- Add jQuery first -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- Correct lightbox.js path -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
-    AOS.init({duration:1000,once:true});
+    // Initialize lightbox with options
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true,
+      'disableScrolling': true,
+      'fitImagesInViewport': true,
+      'albumLabel': 'Image %1 of %2'
+    });
+
+    // Slideshow functionality
+    const slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+
+    setInterval(() => {
+      slides[currentSlide].classList.remove("active");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add("active");
+    }, 5000);
+
+
+    // Initialize AOS
+    AOS.init({ duration: 1000, once: true });
+
+    // Dynamic Copyright Year
+    document.getElementById('year').textContent = new Date().getFullYear();
 
     // Hamburger Menu Toggle
     function toggleMenu() {
-      const menu=document.querySelector('.nav-menu');
-      const hamburger=document.querySelector('.hamburger');
+      const menu = document.querySelector('.nav-menu');
+      const hamburger = document.querySelector('.hamburger');
       menu.classList.toggle('active');
       hamburger.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', menu.classList.contains('active'));
     }
 
     // Smooth Scrolling for Navigation Links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-      anchor.addEventListener('click',function(e){
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});
-        if(document.querySelector('.nav-menu').classList.contains('active')){toggleMenu();}
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        if (document.querySelector('.nav-menu').classList.contains('active')) {
+          toggleMenu();
+        }
       });
     });
 
-    // Quote Form Validation
-    const quoteForm=document.getElementById('quoteForm');
-    const quoteNameInput=document.getElementById('quoteName');
-    const quotePhoneInput=document.getElementById('quotePhone');
-    const quoteNameError=document.getElementById('quoteNameError');
-    const quotePhoneError=document.getElementById('quotePhoneError');
-
-    quoteForm.addEventListener('submit',function(event){
-      event.preventDefault();
-      let isValid=true;
-
-      if(quoteNameInput.value.trim()===''){
-        showError(quoteNameInput,quoteNameError);
-        isValid=false;
-      }else{
-        hideError(quoteNameInput,quoteNameError);
-      }
-
-      if(!/^\+?\d{10,15}$/.test(quotePhoneInput.value.trim())){
-        showError(quotePhoneInput,quotePhoneError);
-        isValid=false;
-      }else{
-        hideError(quotePhoneInput,quotePhoneError);
-      }
-
-      if(isValid){
-        alert('Quote form submitted! (Add backend logic here)');
-        quoteForm.reset();
-      }
-    });
-
-    // Contact Form Validation and Submission
-    const contactForm=document.getElementById('contactForm');
-    const contactNameInput=document.getElementById('contactName');
-    const contactPhoneInput=document.getElementById('contactPhone');
-    const contactNameError=document.getElementById('contactNameError');
-    const contactPhoneError=document.getElementById('contactPhoneError');
-    const formResponse=document.getElementById('form-response');
-
-    contactForm.addEventListener('submit',async function(event){
-      event.preventDefault();
-      let isValid=true;
-      const submitButton=contactForm.querySelector('button[type="submit"]');
-      submitButton.disabled=true;
-      submitButton.textContent='Submitting...';
-
-      if(contactNameInput.value.trim()===''){
-        showError(contactNameInput,contactNameError);
-        isValid=false;
-      }else{
-        hideError(contactNameInput,contactNameError);
-      }
-
-      if(!/^\+?\d{10,15}$/.test(contactPhoneInput.value.trim())){
-        showError(contactPhoneInput,contactPhoneError);
-        isValid=false;
-      }else{
-        hideError(contactPhoneInput,contactPhoneError);
-      }
-
-      if(isValid){
-        try{
-          // Replace with your backend endpoint
-          const response=await fetch('https://your-backend-endpoint.com/submit',{
-            method:'POST',
-            headers:{'Content-Type':'application/json'},
-            body:JSON.stringify({
-              name:contactNameInput.value,
-              phone:contactPhoneInput.value
-            })
-          });
-          if(response.ok){
-            formResponse.classList.remove('hidden');
-            contactForm.reset();
-            setTimeout(()=>{
-              closeModal();
-              formResponse.classList.add('hidden');
-            },2000);
-          }else{
-            alert('Error submitting form. Please try again.');
-          }
-        }catch(error){
-          alert('Network error. Please try again later.');
-        }
-      }
-      submitButton.disabled=false;
-      submitButton.textContent='Send Message';
-    });
-
     // Modal Functions
-    function openModal(){document.getElementById('contactModal').style.display='block';}
-    function closeModal(){document.getElementById('contactModal').style.display='none';}
+    function openModal() {
+      document.getElementById('contactModal').style.display = 'block';
+      document.getElementById('contactName').focus();
+    }
+
+    function closeModal() {
+      document.getElementById('contactModal').style.display = 'none';
+      document.getElementById('contactForm').reset();
+      document.getElementById('form-response').classList.add('hidden');
+    }
 
     // Close modal when clicking outside
-    window.onclick=function(event){
-      const modal=document.getElementById('contactModal');
-      if(event.target===modal){closeModal();}
-    };
+    window.addEventListener('click', function (event) {
+      const modal = document.getElementById('contactModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape') {
+        closeModal();
+      }
+    });
 
     // Back to Top Button
-    const backToTopButton=document.getElementById('backToTop');
-    window.addEventListener('scroll',()=>{
-      if(window.scrollY>300){
+    const backToTopButton = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
         backToTopButton.classList.add('visible');
-      }else{
+      } else {
         backToTopButton.classList.remove('visible');
       }
     });
 
-    function scrollToTop(){window.scrollTo({top:0,behavior:'smooth'});}
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-    function showError(input,errorElement){
+    // Form Validation Helpers
+    function showError(input, errorElement) {
       errorElement.classList.remove('invisible');
       input.classList.add('border-red-500');
     }
 
-    function hideError(input,errorElement){
+    function hideError(input, errorElement) {
       errorElement.classList.add('invisible');
       input.classList.remove('border-red-500');
     }
+
+    
+     // Initialize EmailJS
+     emailjs.init("Nhyhvf08MTPH-yDBx"); // Your EmailJS User ID
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  // Get values
+  const name = document.getElementById("contactName").value.trim();
+  const phone = document.getElementById("contactPhone").value.trim();
+  const email = document.getElementById("contactEmail").value.trim();
+  const mobile = document.getElementById("contactMobile").value.trim();
+
+  // Error elements
+  const nameError = document.getElementById("contactNameError");
+  const phoneError = document.getElementById("contactPhoneError");
+  const emailError = document.getElementById("contactEmailError");
+  const mobileError = document.getElementById("contactMobileError");
+
+  // Reset errors
+  nameError.classList.add("hidden");
+  phoneError.classList.add("hidden");
+  emailError.classList.add("hidden");
+  mobileError.classList.add("hidden");
+
+  // Validation
+  let valid = true;
+
+  if (name === "") {
+    nameError.classList.remove("hidden");
+    valid = false;
+  }
+
+  if (!/^\d{10}$/.test(phone)) {
+    phoneError.classList.remove("hidden");
+    valid = false;
+  }
+
+  if (!/^\S+@\S+\.\S+$/.test(email)) {
+    emailError.classList.remove("hidden");
+    valid = false;
+  }
+
+  if (!/^\d{10,15}$/.test(mobile)) {
+    mobileError.classList.remove("hidden");
+    valid = false;
+  }
+
+  if (!valid) return;
+
+  // Generate current time
+  const currentTime = new Date().toLocaleString();
+
+  // Prepare EmailJS parameters
+  const params = {
+    name: name,
+    phone: phone,
+    email: email,
+    mobile: mobile,
+    message: `Inquiry via contact form`, // Optional message
+    time: currentTime,
+  };
+
+  emailjs.send("service_faztaf9", "template_kvs7gzx", params)
+    .then((response) => {
+      console.log("Email sent successfully", response);
+      document.getElementById("form-response").classList.remove("hidden");
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("Email sending failed", error);
+      alert("Oops! Something went wrong. Please try again.");
+    });
+});
+
+    // Image error handling
+    document.querySelectorAll('.portfolio-img img').forEach(img => {
+      img.onerror = function() {
+        this.src = 'img/placeholder.jpg'; // Fallback image
+      };
+    });
+
   </script>
 </body>
 </html>
